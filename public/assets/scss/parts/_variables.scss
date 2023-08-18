@@ -1,0 +1,14 @@
+$sidebar-sm-width: 50px;
+$sidebar-lg-width: 220px;
+
+$sidebar-background: $gray-800;
+
+
+
+:root {
+    --sidebar-width: #{$sidebar-lg-width};
+    --navbar-height: 50px;
+    --minimize-icon: '\f060';
+    --sidebar-menu-padding-x : .5rem;
+    --sidebar-link-width : 100%;
+}
