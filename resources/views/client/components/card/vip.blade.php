@@ -54,7 +54,7 @@
                 
             ctx.font = "normal 22px Arial"
             ctx.fillStyle = "white";
-            ctx.fillText("www.easygroupage.mg", 700, 470);
+            ctx.fillText("www.easylink.mg", 700, 470);
 
             let url = canvas.toDataURL();
             viewer.setAttribute('src', url);
