@@ -64,9 +64,13 @@
                         'class' => ['form-control-lg']
                     ])
                 </div>
+                
                 <p>
+                    @if($user == 'client' )
                     <a href="{{ route("$user.forgot-password") }}" class="fw-600 fs-12">{{ __('Forgot password ?') }}</a>
+                    @endif
                 </p>
+                
                 <div class="form-group mb-5">
                     <button class="btn btn-primary btn-lg w-100">
                         <span class="fs-18 fw-300">{{__('Login')}}</span>

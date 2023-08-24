@@ -25,7 +25,12 @@ class AuthController extends Controller
             'withRegister' => false
         ]);
     }
-
+    // public function forgotPassword()
+    // {
+    //     return view('auth.forgot-password', [
+    //         'user' => 'admin'
+    //     ]);
+    // }
     public function doLogin(AuthReqest $request)
     {
         $credentials = $request->validated();

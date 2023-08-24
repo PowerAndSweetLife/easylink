@@ -43,6 +43,7 @@
                             @endif
                         </td>
                         <td class="table-column-action">
+                            
                             <a class="btn btn-sm btn-outline-primary" href="{{ route('client.facture.history', ['id' => $item->id]) }}">
                                 <span><i class="fa-solid fa-clock-rotate-left"></i></span>
                                 <span class="ms-2">{{ __('History') }}</span>

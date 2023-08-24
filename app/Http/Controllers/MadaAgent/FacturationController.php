@@ -172,6 +172,7 @@ class FacturationController extends Controller
 
     public function print(int $id)
     {
+        // dd($id) ;
         $facture = FactureHistory::with('facture')->where('id', $id)->get()->first();
         // dd($facture) ;
         if(!$facture)
