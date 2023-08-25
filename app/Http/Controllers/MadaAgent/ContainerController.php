@@ -76,20 +76,32 @@ class ContainerController extends Controller
     public function updateDate(Request $request, int $id)
     {
         $manifest = Manifest::find($id);
-        $manifest->eta = $manifest->eta ?? $request->input('eta');
-        $manifest->ata = $manifest->ata ?? $request->input('ata');
-        $manifest->del = $manifest->del ?? $request->input('del');
-        $manifest->freetime = $manifest->freetime ?? $request->input('freetime');
+        $manifest->eta = $request->input('eta');
+        $manifest->ata = $request->input('ata');
+        $manifest->del = $request->input('del');
+        $manifest->freetime = $request->input('freetime') ?? 0;
 
         $pic = null;
         $foc = null;
+
+        if($manifest->freetime === null) {
+            $manifest->freetime = 0 ;
+        }
+
         if($request->input('ata'))
         {
+            // $dt = new DateTime($request->input('ata'));
+            // $pic = $dt->add(DateInterval::createFromDateString('7 day'));
+            // $foc = $pic->add(DateInterval::createFromDateString('5 day'));
+            // $manifest->pic = $pic;
+            // $manifest->foc = $foc;
+
+            $newFoc = $manifest->freetime + 7 ;
             $dt = new DateTime($request->input('ata'));
-            $pic = $dt->add(DateInterval::createFromDateString('7 day'));
-            $foc = $pic->add(DateInterval::createFromDateString('5 day'));
-            $manifest->pic = $pic;
-            $manifest->foc = $foc;
+            $dt1 = new DateTime($request->input('ata'));
+
+            $manifest->pic = $dt->add(DateInterval::createFromDateString('7 day'));
+            $manifest->foc = $dt1->add(DateInterval::createFromDateString(''.$newFoc.' day'));
         }
         // if($request->input('del') && $request->input('freetime'))
         // {

@@ -19,6 +19,14 @@
         <td>{{ __('Delivery') }}</td>
         <td>{{ shortDate($item->manifest->del) }}</td>
       </tr>
+      <tr>
+        <td>{{ __('Free of charge until') }}</td>
+        <td>{{ shortDate($item->manifest->foc) }}</td>
+      </tr>
+      <tr>
+        <td>{{ __('Freetime') }}</td>
+        <td>{{ ($item->manifest->freetime) }}</td>
+      </tr>
     </table>
   </template>
     <div class="accordion-item">
@@ -58,6 +66,7 @@
                           <th scope="col" class="text-center">{{ __('Number of package') }}</th>
                           <th scope="col" class="text-center">{{ __('Volume') }}</th>
                           <th scope="col" class="text-center">{{ __('Poids') }}</th>
+                          
                         </tr>
                       </thead>
                       <tbody>
@@ -88,7 +97,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="event-date-modal-label">{{ __('Event date') }}</h1>
+        <h1 class="modal-title fs-5" id="event-date-modal-label">{{ __('Events') }}</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

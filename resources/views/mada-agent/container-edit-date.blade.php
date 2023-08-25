@@ -20,7 +20,6 @@
                 'default' => $data->eta()?->format('Y-m-d') ?? null,
                 'type' => 'date',
                 'class' => ['date-input'],
-                'attr' => $data->eta ? ['disabled'] : []
             ])
         </div>
         <div class="form-group mb-3">
@@ -30,7 +29,6 @@
                 'default' => $data->ata()?->format('Y-m-d') ?? null,
                 'type' => 'date',
                 'class' => ['date-input'],
-                'attr' => $data->ata ? ['disabled'] : []
             ])
         </div>
         <div class="form-group mb-3">
@@ -40,7 +38,6 @@
                 'default' => $data->del()?->format('Y-m-d') ?? null,
                 'type' => 'date',
                 'class' => ['date-input'],
-                'attr' => $data->del ? ['disabled'] : []
             ])
         </div>
         <div class="form-group mb-3">
@@ -50,14 +47,41 @@
                 'default' => $data->freetime ?? null,
                 'type' => 'text',
                 'class' => ['integer-only'],
-                'attr' => $data->freetime ? ['disabled'] : []
             ])
         </div>
-        @if (!$allNotNull)
-            @include('elements.btn-submit', [
-                'update' => false,
-                'withConfirm' => true
+
+        <div class="form-group mb-3">
+            @include('elements.input', [
+                'label' => __('PIC'),
+                'name' => '',
+                'default' => $data->pic()?->format('Y-m-d') ?? null,
+                'type' => 'date',
+                'class' => ['date-input'],
+                'attr' => ['disabled']
             ])
+        </div>
+
+        <div class="form-group mb-3">
+            @include('elements.input', [
+                'label' => __('FOC'),
+                'name' => '',
+                'default' => $data->foc()?->format('Y-m-d') ?? null,
+                'type' => 'date',
+                'class' => ['date-input'],
+                'attr' => ['disabled']
+            ])
+        </div>
+
+        @if ($allNotNull ==  false)
+            @include('elements.btn-submit', [
+                'update' => true,
+                'withConfirm' => false
+            ])
+        @else
+            @include('elements.btn-submit', [
+                    'update' => false ,
+                    'withConfirm' => true
+                ])
         @endif
     </form>
 </div>

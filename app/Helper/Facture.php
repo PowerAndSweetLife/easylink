@@ -73,14 +73,14 @@ class Facture {
             $interval = $originalTime->diff($targedTime, true);
             
             $days = (int)$interval->format("%a"); // Nombre de jour de stockage
-            $storagePrice = ((int)($booking->volume() * $days * 9000 / 1000)) * 1000;
+            // $storagePrice = ((int)($booking->volume() * $days * 9000 / 1000)) * 1000;
+            $storagePrice = ((int)($booking->volume() * $days * 9000));
 
             if($storagePrice < 10000)
             {
                 $storagePrice = 10000;
             }
         }
-        // die() ;
         return (object) [
             "storage_price" => $storagePrice ,
             "foreign" => round($price, 2),

@@ -46,6 +46,15 @@ class Manifest extends Model
         return null;
     }
 
+    public function foc()
+    {
+        if($this->pic !== null)
+        {
+            return new DateTime($this->foc);
+        }
+        return null;
+    }
+
     public function volume()
     {
         $volume = 0;

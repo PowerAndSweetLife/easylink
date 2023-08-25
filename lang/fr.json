@@ -138,11 +138,11 @@
     "delivered": "Livré",
     "Received at": "Reçu le",
     "View event": "Voir les evenements",
-    "Event date": "Date des evenements",
-    "Estimated Time of Arrival": "Date d'arrivée estimée",
-    "Actual Time of Arrival": "Date d'arrivée effective",
-    "Pick Up date": "Date d'enlèvement",
-    "Delivery": "Date de livraison",
+    "Events": "Evenements",
+    "Estimated Time of Arrival": "Date d'arrivée estimée (ETA)",
+    "Actual Time of Arrival": "Date d'arrivée effective (ATA)",
+    "Pick Up date": "Date prevue d'enlèvement (PIC)",
+    "Delivery": "Date de livraison (DEL)",
     "Close": "Fermer",
     "Your package has been sent": "Votre colis a été bien envoyé",
     "Your package has been successfully modified": "Votre colis a été bien modifié",
@@ -165,5 +165,8 @@
     "Cash": "Espèces",
     "Cheque": "Chèque",
     "Bank transert": "Virement bancaire",
-    "Search result": "Resultat de la recherche"
+    "Search result": "Resultat de la recherche",
+    "Freetime": "Magasinage gratuit (en jour(s)) ",
+    "Storage fee": "Frais de magasinage",
+    "Free of charge until": "Magasinage gratuit jusqu'à (FOC)"
 }
