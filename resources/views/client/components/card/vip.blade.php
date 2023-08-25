@@ -48,9 +48,13 @@
             ctx.font = "normal 42px Ageta"
             ctx.textAlign = "center";
             ctx.fillText("{{ $client->name() }}", 425, 250);
+
+            ctx.font = "normal 42px Arial"
+            ctx.textAlign = "center";
+            ctx.fillText("{{ $client->cbm }} point(s)", 425, 370);
+
             ctx.font = "normal 48px Ageta"
             ctx.fillText("{{ $client->uid }}", 425, 320);
-
                 
             ctx.font = "normal 22px Arial"
             ctx.fillStyle = "white";

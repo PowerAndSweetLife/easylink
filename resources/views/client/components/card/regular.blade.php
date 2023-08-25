@@ -59,6 +59,10 @@
         ctx.font = "normal 42px Arial"
         ctx.textAlign = "center";
         ctx.fillText("{{ $client->name() }}", 425, 200);
+
+        ctx.font = "normal 42px Arial"
+        ctx.textAlign = "center";
+        ctx.fillText("{{ $client->cbm }} point(s)", 425, 325);
         
         ctx.font = "normal 48px Arial"
         ctx.fillText("{{ $client->uid }}", 425, 265);
